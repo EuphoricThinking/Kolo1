@@ -18,24 +18,24 @@ bool binsearch(int start, int end, int el, int p2[]) {
 typedef struct tablica {
 	int dl;
 	int tab[];
-} tablica
+} tablica;
 
 tablica max(tablica p1, tablica p2) {
-	if (p1.dl>p.2) return p1;
+	if (p1.dl>p2.dl) return p1;
 	else return p2;
 }
 
-struct min(struct p1, struct p2) {
-	if (p1.dl<p.2) return p1;
+tablica min(tablica p1, tablica p2) {
+	if (p1.dl<p2.dl) return p1;
 	else return p2;
 }
 
 bool tab_bin(tablica p1, tablica p2) {
-	int minima = min(p1, p2);
-	int maxima = max(p1, p2);
+	tablica minima = min(p1, p2);
+	tablica maxima = max(p1, p2);
 
 	for (int i = 0; i<minima.dl; i++) {
-		if ( i!=maxima.dl-1 && (maxima.dl[i] == maxima.dl[i+1] || minima.dl[i] == minima.dl[i+1])) {
+		if ( i!=maxima.dl-1 && (maxima.tab[i] == maxima.tab[i+1] || minima.tab[i] == minima.tab[i+1])) {
 			 return true;
 		} else {
 			bool t = binsearch(i, maxima.dl-1, minima.tab[i], maxima.tab);
@@ -51,11 +51,11 @@ bool tab_bin(tablica p1, tablica p2) {
 
 int main(void) {
 	tablica p1;
-	p1.tab = {1,2,3,4,5};
-	p2.dl = 5;
+	p1.tab[] = {1,2,3,4,5};
+	p1.dl = 5;
 
 	tablica p2;
-	p2.tab = {1,2,3,4,5};
+	p2.tab[] = {1,2,3,4,5};
 	p2.dl = 5;
 
 	bool t = tab_bin(p1,p2);
